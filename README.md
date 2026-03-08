@@ -2,9 +2,9 @@
 Finds the minimal character representation for a given JSON or XML input by converting it to viable formats such as JSON compact, YAML or toon.
 
 ## Install 
-`python3 -m venv .venv`
-`source .venv/bin/activate`
-`pip install xmltodict toml pyyaml python-toon` or `pip install -r requirements.txt`
+`python3 -m venv .venv`  
+`source .venv/bin/activate`  
+`pip install xmltodict toml pyyaml python-toon` or `pip install -r requirements.txt`  
 
 ## Run
 
