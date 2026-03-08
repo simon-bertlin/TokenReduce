@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example XML document representing a digital library system -->
+
+<library xmlns:media="http://example.org/media"
+         xmlns:user="http://example.org/user"
+         location="Stockholm"
+         established="1984">
+
+    <metadata>
+        <name>Nordic Digital Library</name>
+        <description>A collection of books, movies, and digital media.</description>
+        <totalItems>15234</totalItems>
+        <lastUpdated>2026-03-07</lastUpdated>
+    </metadata>
+
+    <sections>
+
+        <section id="books">
+            <title>Books</title>
+
+            <book isbn="9780134685991">
+                <title>Effective Java</title>
+                <author>
+                    <firstName>Joshua</firstName>
+                    <lastName>Bloch</lastName>
+                </author>
+                <publisher>Addison-Wesley</publisher>
+                <publishedYear>2018</publishedYear>
+                <pages>416</pages>
+
+                <categories>
+                    <category>Programming</category>
+                    <category>Java</category>
+                    <category>Software Engineering</category>
+                </categories>
+
+                <availability>
+                    <totalCopies>12</totalCopies>
+                    <availableCopies>4</availableCopies>
+                </availability>
+            </book>
+
+            <book isbn="9781492056355">
+                <title>Designing Data-Intensive Applications</title>
+                <author>
+                    <firstName>Martin</firstName>
+                    <lastName>Kleppmann</lastName>
+                </author>
+                <publisher>O'Reilly Media</publisher>
+                <publishedYear>2017</publishedYear>
+
+                <categories>
+                    <category>Distributed Systems</category>
+                    <category>Databases</category>
+                </categories>
+
+                <availability>
+                    <totalCopies>6</totalCopies>
+                    <availableCopies>1</availableCopies>
+                </availability>
+            </book>
+
+        </section>
+
+        <section id="movies">
+            <title>Movies</title>
+
+            <media:movie id="mv001">
+                <title>Inception</title>
+                <director>Christopher Nolan</director>
+                <releaseYear>2010</releaseYear>
+                <durationMinutes>148</durationMinutes>
+
+                <media:formats>
+                    <media:format>Blu-ray</media:format>
+                    <media:format>Streaming</media:format>
+                    <media:format>Digital Download</media:format>
+                </media:formats>
+
+                <rating system="IMDB">8.8</rating>
+            </media:movie>
+
+            <media:movie id="mv002">
+                <title>The Matrix</title>
+                <director>Lana Wachowski</director>
+                <director>Lilly Wachowski</director>
+                <releaseYear>1999</releaseYear>
+                <durationMinutes>136</durationMinutes>
+
+                <media:formats>
+                    <media:format>DVD</media:format>
+                    <media:format>Blu-ray</media:format>
+                    <media:format>Streaming</media:format>
+                </media:formats>
+
+                <rating system="IMDB">8.7</rating>
+            </media:movie>
+
+        </section>
+
+    </sections>
+
+    <users>
+
+        <user:member id="u1001" membership="premium">
+            <user:name>
+                <user:firstName>Alice</user:firstName>
+                <user:lastName>Andersson</user:lastName>
+            </user:name>
+
+            <user:email>alice@example.com</user:email>
+
+            <user:borrowedItems>
+                <item type="book" ref="9780134685991"/>
+                <item type="movie" ref="mv002"/>
+            </user:borrowedItems>
+
+            <user:joinedDate>2021-05-14</user:joinedDate>
+        </user:member>
+
+        <user:member id="u1002" membership="standard">
+            <user:name>
+                <user:firstName>Erik</user:firstName>
+                <user:lastName>Larsson</user:lastName>
+            </user:name>
+
+            <user:email>erik@example.com</user:email>
+
+            <user:borrowedItems>
+                <item type="book" ref="9781492056355"/>
+            </user:borrowedItems>
+
+            <user:joinedDate>2023-01-02</user:joinedDate>
+        </user:member>
+
+    </users>
+
+    <systemSettings>
+
+        <maxBorrowDays>30</maxBorrowDays>
+        <lateFee currency="SEK">5</lateFee>
+
+        <notifications>
+            <emailEnabled>true</emailEnabled>
+            <smsEnabled>false</smsEnabled>
+            <reminderDaysBeforeDue>3</reminderDaysBeforeDue>
+        </notifications>
+
+    </systemSettings>
+
+</library>

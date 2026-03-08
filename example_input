@@ -1,0 +1,217 @@
+{
+  "system": {
+    "name": "ShopSphere",
+    "version": "3.4.2",
+    "environment": "production",
+    "generatedAt": "2026-03-07T14:22:18Z"
+  },
+  "customers": [
+    {
+      "id": "cust_1001",
+      "name": {
+        "first": "Anna",
+        "last": "Johansson"
+      },
+      "email": "anna.johansson@example.com",
+      "phone": "+46-70-123-4567",
+      "createdAt": "2024-05-12T10:11:00Z",
+      "loyalty": {
+        "tier": "gold",
+        "points": 4830
+      },
+      "addresses": [
+        {
+          "id": "addr_1",
+          "type": "home",
+          "street": "Storgatan 14",
+          "city": "Sundsvall",
+          "postalCode": "85230",
+          "country": "SE",
+          "coordinates": {
+            "lat": 62.3908,
+            "lon": 17.3069
+          }
+        },
+        {
+          "id": "addr_2",
+          "type": "work",
+          "street": "Teknikvägen 3",
+          "city": "Sundsvall",
+          "postalCode": "85753",
+          "country": "SE"
+        }
+      ],
+      "preferences": {
+        "currency": "SEK",
+        "language": "sv",
+        "newsletter": true,
+        "favoriteCategories": [
+          "electronics",
+          "fitness",
+          "books"
+        ]
+      }
+    },
+    {
+      "id": "cust_1002",
+      "name": {
+        "first": "Erik",
+        "last": "Larsson"
+      },
+      "email": "erik.larsson@example.com",
+      "phone": "+46-73-999-8888",
+      "createdAt": "2025-02-03T08:55:19Z",
+      "loyalty": {
+        "tier": "silver",
+        "points": 1290
+      },
+      "addresses": [
+        {
+          "id": "addr_3",
+          "type": "home",
+          "street": "Björkvägen 22",
+          "city": "Umeå",
+          "postalCode": "90336",
+          "country": "SE"
+        }
+      ],
+      "preferences": {
+        "currency": "SEK",
+        "language": "sv",
+        "newsletter": false,
+        "favoriteCategories": [
+          "gaming",
+          "home"
+        ]
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_501",
+      "name": "Mechanical Keyboard X1",
+      "brand": "KeyForge",
+      "price": {
+        "amount": 1499,
+        "currency": "SEK"
+      },
+      "stock": 120,
+      "tags": [
+        "keyboard",
+        "gaming",
+        "mechanical"
+      ],
+      "dimensions": {
+        "weightKg": 0.9,
+        "widthCm": 44,
+        "heightCm": 4,
+        "depthCm": 14
+      },
+      "ratings": {
+        "average": 4.6,
+        "count": 381
+      }
+    },
+    {
+      "id": "prod_502",
+      "name": "Adjustable Dumbbell Set",
+      "brand": "IronCore",
+      "price": {
+        "amount": 2399,
+        "currency": "SEK"
+      },
+      "stock": 42,
+      "tags": [
+        "fitness",
+        "strength",
+        "home-gym"
+      ],
+      "dimensions": {
+        "weightKg": 24,
+        "widthCm": 45,
+        "heightCm": 20,
+        "depthCm": 20
+      },
+      "ratings": {
+        "average": 4.8,
+        "count": 119
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_90001",
+      "customerId": "cust_1001",
+      "createdAt": "2026-03-05T13:44:10Z",
+      "status": "shipped",
+      "items": [
+        {
+          "productId": "prod_501",
+          "quantity": 1,
+          "price": {
+            "amount": 1499,
+            "currency": "SEK"
+          }
+        },
+        {
+          "productId": "prod_502",
+          "quantity": 1,
+          "price": {
+            "amount": 2399,
+            "currency": "SEK"
+          }
+        }
+      ],
+      "payment": {
+        "method": "card",
+        "transactionId": "txn_8439201",
+        "paidAt": "2026-03-05T13:45:02Z",
+        "amount": 3898,
+        "currency": "SEK"
+      },
+      "shipping": {
+        "carrier": "PostNord",
+        "service": "standard",
+        "trackingNumber": "PN123456789SE",
+        "shippedAt": "2026-03-06T07:10:00Z",
+        "estimatedDelivery": "2026-03-09",
+        "addressId": "addr_1"
+      },
+      "totals": {
+        "subtotal": 3898,
+        "tax": 779.6,
+        "shipping": 49,
+        "grandTotal": 4726.6
+      }
+    }
+  ],
+  "analytics": {
+    "dailySales": [
+      {
+        "date": "2026-03-01",
+        "orders": 143,
+        "revenue": 284901
+      },
+      {
+        "date": "2026-03-02",
+        "orders": 167,
+        "revenue": 315442
+      },
+      {
+        "date": "2026-03-03",
+        "orders": 152,
+        "revenue": 298774
+      }
+    ],
+    "topCategories": [
+      {
+        "name": "electronics",
+        "revenue": 1203344
+      },
+      {
+        "name": "fitness",
+        "revenue": 842112
+      }
+    ]
+  }
+}
