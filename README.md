@@ -1,5 +1,5 @@
 ## TokenReduce
-Finds the minimal character representation for a given JSON or XML input by converting it to viable formats such as JSON compact, YAML or toon.
+Finds the minimal character representation for a given JSON or XML input by converting it to viable formats such as JSON compact, YAML or TOON.
 
 ## Install 
 `python3 -m venv .venv`  
