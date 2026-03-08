@@ -10,6 +10,6 @@ Finds the minimal character representation for a given JSON or XML input by conv
 
 Remove `example_` from the file `example_input` or `example_xml_input` then run `python3 converter.py`
 
-## Install
+## Test
 
 `python3 test_converter.py`
